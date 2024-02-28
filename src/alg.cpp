@@ -4,6 +4,7 @@
 
 
 bool checkPrime(uint64_t value) {
+    // вставьте код функции
     if (value <= 1) {
         return false;
     }
@@ -19,6 +20,7 @@ bool checkPrime(uint64_t value) {
 }
 
 uint64_t nPrime(uint64_t n) {
+    // вставьте код функции
     uint64_t count = 0;
     uint64_t num = 2;
     while (count < n) {
