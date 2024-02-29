@@ -42,11 +42,18 @@ uint64_t nextPrime(uint64_t value) {
 
 uint64_t sumPrime(uint64_t hbound) {
 // вставьте код функции
-    uint64_t sprime = 0;
-    for (uint64_t i = 2; i < hbound; i++) {
-        if (isPrime(i)) {
-            sprime += i;
+    uint64_t sum = 0;
+    for (uint64_t num = 2; num < hbound; num++) {
+        bool isPrime = true;
+            for (uint64_t divs = 2; divs <= num / 2; divs++) {
+                if (num % divs == 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+        if (isPrime) {
+            sum += num;
         }
     }
-    return sprime;
+    return sum;
 }
